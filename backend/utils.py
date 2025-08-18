@@ -1,4 +1,9 @@
 def filter_allergies(recipes, allergies):
     if not allergies:
         return recipes
-    return [r for r in recipes if r["allergen_free"]]
+    allergies = [a.lower() for a in allergies]
+    filtered = []
+    for recipe in recipes:
+        if not any(ingredient.lower() in allergies for ingredient in recipe["ingredients"]):
+            filtered.append(recipe)
+    return filtered

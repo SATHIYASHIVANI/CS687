@@ -5,6 +5,14 @@ import axios from "axios";
 export default function RecipeScreen({ recipe, allergies, onBack }) {
   const [allergyResult, setAllergyResult] = useState(null);
 
+  // Example food images for the row
+  const foodImages = [
+    require("../assets/creativity.png"),
+    require("../assets/icon.png"),
+    require("../assets/splash-icon.png"),
+    require("../assets/adaptive-icon.png")
+  ];
+
   const checkAllergy = async () => {
     const res = await axios.post("http://127.0.0.1:5000/allergy-check", {
       name: recipe.name,

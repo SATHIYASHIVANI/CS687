@@ -1,23 +1,23 @@
 {
   "name": "smart-recipe-app",
-  "license": "0BSD",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
+    "web": "expo start --web",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo start --android"
   },
   "dependencies": {
-    "axios": "^1.11.0",
     "expo": "~53.0.20",
     "expo-status-bar": "~2.2.3",
+    "@expo/vector-icons": "^14.0.0",
+    "axios": "^1.6.0",
     "react": "19.0.0",
-    "react-native": "0.79.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+    "react-dom": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-web": "~0.19.11",
+    "@expo/metro-runtime": "~5.0.4"
+  }
 }

@@ -6,9 +6,15 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png"
+      "image": "./assets/splash-icon.png"
     },
     "platforms": ["ios", "android", "web"],
+    "android": {
+      "jsEngine": "jsc"
+    },
+    "ios": {
+      "jsEngine": "jsc"
+    },
     "entryPoint": "App.js"
   }
 }
